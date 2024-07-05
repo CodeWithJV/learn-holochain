@@ -1,2 +1,2 @@
-# holochain-student-guide
-A guide for self directed study through the holochain curriculum
+# Learn Holochain
+A guide for self directed study through the [open holochain curriculum](https://github.com/CodeWithJV/open-holochain-curriculum)
