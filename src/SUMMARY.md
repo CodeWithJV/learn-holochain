@@ -1,7 +1,7 @@
 # Summary
 
-[Introduction](README.md)
-[Installation](installation.md)
+- [Introduction](README.md)
+- [Installation](installation.md)
 
 # Module 1: Actions and Entries
 - [Overview](challenge1/introduction.md)
