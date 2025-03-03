@@ -1,0 +1,312 @@
+
+/* Globals */
+
+:root {
+    --sidebar-width: 300px;
+    --sidebar-resize-indicator-width: 8px;
+    --sidebar-resize-indicator-space: 2px;
+    --page-padding: 30px;
+    --content-max-width: 750px;
+    --menu-bar-height: 50px;
+    --mono-font: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace;
+    --code-font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
+    
+    /* Holochain Theme Colors */
+    --holochain-primary: #5d8392;
+    --holochain-primary-light: #7ba8b8;
+    --holochain-primary-dark: #4a6a78;
+}
+
+/* Themes */
+
+.ayu {
+    --bg: hsl(210, 25%, 8%);
+    --fg: #c5c5c5;
+
+    --sidebar-bg: #14191f;
+    --sidebar-fg: #c8c9db;
+    --sidebar-non-existant: #5c6773;
+    --sidebar-active: #ffb454;
+    --sidebar-spacer: #2d334f;
+
+    --scrollbar: var(--sidebar-fg);
+
+    --icons: #737480;
+    --icons-hover: #b7b9cc;
+
+    --links: #0096cf;
+
+    --inline-code-color: #ffb454;
+
+    --theme-popup-bg: #14191f;
+    --theme-popup-border: #5c6773;
+    --theme-hover: #191f26;
+
+    --quote-bg: hsl(226, 15%, 17%);
+    --quote-border: hsl(226, 15%, 22%);
+
+    --warning-border: #ff8e00;
+
+    --table-border-color: hsl(210, 25%, 13%);
+    --table-header-bg: hsl(210, 25%, 28%);
+    --table-alternate-bg: hsl(210, 25%, 11%);
+
+    --searchbar-border-color: #848484;
+    --searchbar-bg: #424242;
+    --searchbar-fg: #fff;
+    --searchbar-shadow-color: #d4c89f;
+    --searchresults-header-fg: #666;
+    --searchresults-border-color: #888;
+    --searchresults-li-bg: #252932;
+    --search-mark-bg: #e3b171;
+
+    --color-scheme: dark;
+
+    /* Same as `--icons` */
+    --copy-button-filter: invert(45%) sepia(6%) saturate(621%) hue-rotate(198deg) brightness(99%) contrast(85%);
+    /* Same as `--sidebar-active` */
+    --copy-button-filter-hover: invert(68%) sepia(55%) saturate(531%) hue-rotate(341deg) brightness(104%) contrast(101%);
+}
+
+.coal {
+    --bg: hsl(200, 7%, 8%);
+    --fg: #98a3ad;
+
+    --sidebar-bg: #292c2f;
+    --sidebar-fg: #a1adb8;
+    --sidebar-non-existant: #505254;
+    --sidebar-active: #3473ad;
+    --sidebar-spacer: #393939;
+
+    --scrollbar: var(--sidebar-fg);
+
+    --icons: #43484d;
+    --icons-hover: #b3c0cc;
+
+    --links: #2b79a2;
+
+    --inline-code-color: #c5c8c6;
+
+    --theme-popup-bg: #141617;
+    --theme-popup-border: #43484d;
+    --theme-hover: #1f2124;
+
+    --quote-bg: hsl(234, 21%, 18%);
+    --quote-border: hsl(234, 21%, 23%);
+
+    --warning-border: #ff8e00;
+
+    --table-border-color: hsl(200, 7%, 13%);
+    --table-header-bg: hsl(200, 7%, 28%);
+    --table-alternate-bg: hsl(200, 7%, 11%);
+
+    --searchbar-border-color: #aaa;
+    --searchbar-bg: #b7b7b7;
+    --searchbar-fg: #000;
+    --searchbar-shadow-color: #aaa;
+    --searchresults-header-fg: #666;
+    --searchresults-border-color: #98a3ad;
+    --searchresults-li-bg: #2b2b2f;
+    --search-mark-bg: #355c7d;
+
+    --color-scheme: dark;
+
+    /* Same as `--icons` */
+    --copy-button-filter: invert(26%) sepia(8%) saturate(575%) hue-rotate(169deg) brightness(87%) contrast(82%);
+    /* Same as `--sidebar-active` */
+    --copy-button-filter-hover: invert(36%) sepia(70%) saturate(503%) hue-rotate(167deg) brightness(98%) contrast(89%);
+}
+
+.light, html:not(.js) {
+    --bg: hsl(0, 0%, 100%);
+    --fg: hsl(0, 0%, 0%);
+
+    --sidebar-bg: #f5f7f9;
+    --sidebar-fg: hsl(0, 0%, 0%);
+    --sidebar-non-existant: #aaaaaa;
+    --sidebar-active: var(--holochain-primary);
+    --sidebar-spacer: #e5e5e5;
+
+    --scrollbar: #8F8F8F;
+
+    --icons: #747474;
+    --icons-hover: var(--holochain-primary);
+
+    --links: var(--holochain-primary);
+
+    --inline-code-color: #333333;
+
+    --theme-popup-bg: #fafafa;
+    --theme-popup-border: #cccccc;
+    --theme-hover: #e6e6e6;
+
+    --quote-bg: #f5f7f9;
+    --quote-border: var(--holochain-primary);
+
+    --warning-border: #ff8e00;
+
+    --table-border-color: #e5e5e5;
+    --table-header-bg: #f2f7f9;
+    --table-alternate-bg: #f9f9f9;
+
+    --searchbar-border-color: #ccc;
+    --searchbar-bg: #f7f7f7;
+    --searchbar-fg: #000;
+    --searchbar-shadow-color: var(--holochain-primary-light);
+    --searchresults-header-fg: #666;
+    --searchresults-border-color: #ccc;
+    --searchresults-li-bg: #f5f7f9;
+    --search-mark-bg: var(--holochain-primary-light);
+
+    --color-scheme: light;
+
+    /* Filters for Holochain colors */
+    --copy-button-filter: invert(45.49%);
+    --copy-button-filter-hover: invert(50%) sepia(20%) saturate(657%) hue-rotate(152deg) brightness(92%) contrast(86%);
+}
+
+.navy {
+    --bg: hsl(226, 23%, 11%);
+    --fg: #bcbdd0;
+
+    --sidebar-bg: #252525;
+    --sidebar-fg: #ddd;
+    --sidebar-non-existant: #505274;
+    --sidebar-active: #8eafbf;  /* Lighter version of Holochain blue for dark theme */
+    --sidebar-spacer: #444;
+
+    --scrollbar: var(--sidebar-fg);
+
+    --icons: #737480;
+    --icons-hover: #8eafbf;
+
+    --links: #8eafbf;
+
+    --inline-code-color: #c5c8c6;
+
+    --theme-popup-bg: #161923;
+    --theme-popup-border: #737480;
+    --theme-hover: #282e40;
+
+    --quote-bg: #252525;
+    --quote-border: #8eafbf;
+
+    --warning-border: #ff8e00;
+
+    --table-border-color: #444;
+    --table-header-bg: #333;
+    --table-alternate-bg: #2c2c2c;
+
+    --searchbar-border-color: #555;
+    --searchbar-bg: #333;
+    --searchbar-fg: #ddd;
+    --searchbar-shadow-color: #8eafbf;
+    --searchresults-header-fg: #8eafbf;
+    --searchresults-border-color: #444;
+    --searchresults-li-bg: #333;
+    --search-mark-bg: #5d8392;
+
+    --color-scheme: dark;
+
+    /* Holochain-specific filter colors */
+    --copy-button-filter: invert(70%) sepia(13%) saturate(456%) hue-rotate(152deg) brightness(92%) contrast(86%);
+    --copy-button-filter-hover: invert(80%) sepia(20%) saturate(456%) hue-rotate(152deg) brightness(92%) contrast(86%);
+}
+
+.rust {
+    --bg: hsl(60, 9%, 87%);
+    --fg: #262625;
+
+    --sidebar-bg: #3b2e2a;
+    --sidebar-fg: #c8c9db;
+    --sidebar-non-existant: #505254;
+    --sidebar-active: #e69f67;
+    --sidebar-spacer: #45373a;
+
+    --scrollbar: var(--sidebar-fg);
+
+    --icons: #737480;
+    --icons-hover: #262625;
+
+    --links: #2b79a2;
+
+    --inline-code-color: #6e6b5e;
+
+    --theme-popup-bg: #e1e1db;
+    --theme-popup-border: #b38f6b;
+    --theme-hover: #99908a;
+
+    --quote-bg: hsl(60, 5%, 75%);
+    --quote-border: hsl(60, 5%, 70%);
+
+    --warning-border: #ff8e00;
+
+    --table-border-color: hsl(60, 9%, 82%);
+    --table-header-bg: #b3a497;
+    --table-alternate-bg: hsl(60, 9%, 84%);
+
+    --searchbar-border-color: #aaa;
+    --searchbar-bg: #fafafa;
+    --searchbar-fg: #000;
+    --searchbar-shadow-color: #aaa;
+    --searchresults-header-fg: #666;
+    --searchresults-border-color: #888;
+    --searchresults-li-bg: #dec2a2;
+    --search-mark-bg: #e69f67;
+
+    /* Same as `--icons` */
+    --copy-button-filter: invert(51%) sepia(10%) saturate(393%) hue-rotate(198deg) brightness(86%) contrast(87%);
+    /* Same as `--sidebar-active` */
+    --copy-button-filter-hover: invert(77%) sepia(16%) saturate(1798%) hue-rotate(328deg) brightness(98%) contrast(83%);
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not(.js) {
+        --bg: hsl(200, 7%, 8%);
+        --fg: #98a3ad;
+
+        --sidebar-bg: #292c2f;
+        --sidebar-fg: #a1adb8;
+        --sidebar-non-existant: #505254;
+        --sidebar-active: #3473ad;
+        --sidebar-spacer: #393939;
+
+        --scrollbar: var(--sidebar-fg);
+
+        --icons: #43484d;
+        --icons-hover: #b3c0cc;
+
+        --links: #2b79a2;
+
+        --inline-code-color: #c5c8c6;
+
+        --theme-popup-bg: #141617;
+        --theme-popup-border: #43484d;
+        --theme-hover: #1f2124;
+
+        --quote-bg: hsl(234, 21%, 18%);
+        --quote-border: hsl(234, 21%, 23%);
+
+        --warning-border: #ff8e00;
+
+        --table-border-color: hsl(200, 7%, 13%);
+        --table-header-bg: hsl(200, 7%, 28%);
+        --table-alternate-bg: hsl(200, 7%, 11%);
+
+        --searchbar-border-color: #aaa;
+        --searchbar-bg: #b7b7b7;
+        --searchbar-fg: #000;
+        --searchbar-shadow-color: #aaa;
+        --searchresults-header-fg: #666;
+        --searchresults-border-color: #98a3ad;
+        --searchresults-li-bg: #2b2b2f;
+        --search-mark-bg: #355c7d;
+
+        --color-scheme: dark;
+
+        /* Same as `--icons` */
+        --copy-button-filter: invert(26%) sepia(8%) saturate(575%) hue-rotate(169deg) brightness(87%) contrast(82%);
+        /* Same as `--sidebar-active` */
+        --copy-button-filter-hover: invert(36%) sepia(70%) saturate(503%) hue-rotate(167deg) brightness(98%) contrast(89%);
+    }
+}

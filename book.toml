@@ -1,0 +1,20 @@
+[book]
+title = "Learn Holochain"
+authors = ["Joshua Vial"]
+description = "A guide for self-directed study through the open Holochain curriculum"
+language = "en"
+multilingual = false
+src = "src"
+
+[output.html]
+theme = "theme"
+default-theme = "light"
+preferred-dark-theme = "navy"
+use-default-colors = false
+no-section-label = true
+smart-punctuation = true
+mathjax-support = false
+copy-fonts = true
+git-repository-url = "https://github.com/CodeWithJV/open-holochain-curriculum"
+edit-url-template = "https://github.com/CodeWithJV/open-holochain-curriculum/edit/main/learn-holochain/{path}"
+additional-js = ["theme/force-light.js"]

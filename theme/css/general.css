@@ -1,0 +1,128 @@
+/* Base styles and content styles */
+
+@import 'variables.css';
+
+:not(#content) > :root {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+html {
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+/* Defaults */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+#body-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+code {
+    font-family: var(--mono-font);
+    font-size: var(--code-font-size);
+    direction: ltr;
+}
+
+/* make long words/inline code not x overflow */
+main {
+    overflow-wrap: break-word;
+    padding: 0 var(--page-padding);
+    max-width: calc(var(--content-max-width) + 2 * var(--page-padding));
+    margin: 0 auto;
+}
+
+/* make wide tables scroll if they overflow */
+.table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Fix a bug where the content would not wrap during print */
+@media print {
+    main {
+        height: auto !important;
+    }
+}
+
+a {
+    color: var(--links);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.js:not(.sidebar-resizing) {
+    transition: .3s;
+    scroll-behavior: smooth;
+}
+
+/* Chapter headings and content */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    color: var(--holochain-primary);
+}
+
+/* Content spacing */
+p, ul, ol {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Fix spacing for lists */
+ol > li {
+    margin-bottom: 0.5rem;
+}
+
+/* Specifically target the structure in the requirements sections */
+ol > li > p {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+ol > li > ul {
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    padding-top: 0;
+}
+
+ol > li > ul > li {
+    margin-bottom: 0.1rem;
+}
+
+/* Holochain Specific Overrides */
+html.coal, html.navy, html.ayu, html.rust {
+    background-color: white !important;
+    color: #333 !important;
+}
+
+html.coal *, html.navy *, html.ayu *, html.rust * {
+    --bg: white !important;
+    --fg: #333 !important;
+    --sidebar-bg: #f5f7f9 !important;
+    --sidebar-fg: #333 !important;
+    color-scheme: light !important;
+}
