@@ -27,7 +27,10 @@ jobs:
           mdbook-version: 'latest'
       
       - name: Build book
-        run: mdbook build
+        run: |
+          ls -la
+          ./build.sh
+          ls -la book
       
       - name: Setup Pages
         uses: actions/configure-pages@v3
